@@ -1,0 +1,47 @@
+{% if posts|length > 0 %}
+  <ul class="searchList">
+    {% for post in posts  %}
+      <li class="grid-item" data-term="{{ post.category.title|lower|replace({' ': '-'}) }}" data-format="{{ post.terms('format')|join(', ')|lower|replace({' ': '-'})  }}">
+        <div class="content">
+          <a href="{{ post.link }}" class="content-link" title="{{ post.title }}">
+            <figure class="figure">
+              <img class="figure-image lazyload"
+                src="{{ post.thumbnail.src|resize(32) }}"
+                data-srcset="{{function('wp_get_attachment_image_srcset', post.thumbnail.id)}}"
+                data-sizes="auto"
+                alt="{{ post.title }}">
+            </figure>
+            <div class="post-category small">
+              <span>{{ post.category() }}</span>
+              <span> / </span>
+              <span> {{ post.terms('format') | join(', ')  }} </span>
+              {# {% for tag in item.terms('tag')  %}
+                <span>{{ tag }}</span> #}
+                {# <li class="tags-item"><a class="tags-itemLink" href="{{ tag.link }}"><span class="visuallyHidden">{{ __("Tag:", "flynt") }}</span> {{ tag }}</a></li> #}
+              {# {% endfor %} #}
+              {# <span>{{ post.terms('tag') }}</span> #}
+            </div>
+            <div class="content-inner">
+              <h2 class="h2 post-title">{{ post.title }}</h2>
+              {# <p class="post-excerpt">{{ post.preview.read_more(false) }}</p> #}
+              <a class="button button--link small" href="{{ post.link }}" title="{{ post.title }}" aria-hidden="true" tabindex="-1">
+                {{ labels.readMore }}
+                <sup>( {{ post.content | readingtime }} {{ labels.readingTime }} )</sup>
+              </a>
+            </div>
+          </a>
+          {# <footer class="content-footer">
+            <span class="content-readingTime">
+              <i data-feather="clock"></i> {{ item.content | readingtime }} {{ labels.readingTime }}
+            </span>
+            <a href="{{ item.link }}" class="button button--link content-readMore" aria-hidden="true" tabindex="-1">{{ labels.readMore }}</a>
+          </footer> #}
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <div class="noResults boxed">
+    <h1>{{ labels.noResults }}</h1>
+  </div>
+{% endif %}

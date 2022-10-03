@@ -1,0 +1,98 @@
+.searchList {
+  @include reset-list;
+  display: flex;
+  flex-flow: row wrap;
+  gap: $spacing-large;
+  grid-column-end: 8;
+  grid-column-start: 2;
+  padding: $spacing-large 0;
+  row-gap: $spacing-large;
+
+  @media (max-width: $breakpoint-mobile) {
+    padding-bottom: $spacing-large;
+    padding-top: $spacing-large;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    grid-column-end: 9;
+    grid-column-start: 1;
+    padding-left: $spacing-large;
+    padding-right: $spacing-large;
+  }
+}
+
+.grid-item {
+  flex-grow: 0;
+  width: calc(50% - 12.5px);
+
+  @media (max-width: $breakpoint-mobile) {
+    width: 100%;
+  }
+
+  &:last-child {
+    flex-grow: 0;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    margin-bottom: $spacing-large;
+  }
+
+  &:hover {
+    .figure-image {
+      overflow: hidden;
+      transform: scale(1.1);
+      transition: all 0.2s linear;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+
+    .figure {
+      flex-shrink: 0; // IE11 bug fix (prevent image from stretchin')
+      margin: 0;
+      overflow: hidden;
+      transition: all 0.2s linear;
+
+      &-image {
+        aspect-ratio: 3/2;
+        height: 23vw;
+        object-fit: cover;
+        transition: all 0.2s linear;
+
+        @media (max-width: $breakpoint-tablet) {
+          height: auto;
+        }
+      }
+    }
+
+    .post-category {
+      margin-bottom: $spacing-small;
+      margin-top: $spacing-large;
+    }
+
+    &-inner {
+      @include reset-content-margins;
+
+      .button--link {
+        font-family: 'NB Internaional', sans-serif;
+        text-align: left;
+        width: fit-content;
+      }
+    }
+
+    &-link {
+      display: block;
+      text-decoration: none;
+    }
+  }
+}
+
+.noResults {
+  grid-column-end: 8;
+  grid-column-start: 2;
+  text-align: center;
+}

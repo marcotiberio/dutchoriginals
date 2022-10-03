@@ -1,0 +1,47 @@
+/* Custom styling for posts */
+
+.single-post {
+  .post-related {
+    margin: 0 auto;
+    max-width: 1080px;
+    padding: $spacing-large 0;
+    width: 100%;
+
+    @media (max-width: $breakpoint-mobile) {
+      margin: 0;
+      max-width: 100%;
+      padding: $spacing-large;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+      margin: 0;
+      max-width: 100%;
+      padding: $spacing-large;
+    }
+
+    .preContent {
+      display: none;
+    }
+
+    .container {
+      @media (max-width: $breakpoint-mobile) {
+        padding: 0;
+      }
+    }
+
+    .grid {
+      border-top: 1px solid $black;
+      grid-template-columns: repeat(4, 1fr);
+      margin-top: $spacing-large;
+      padding-top: $spacing-large;
+
+      @media (max-width: $breakpoint-mobile) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+
+  [is='flynt-navigation-footer-columns'] {
+    margin-top: 0;
+  }
+}

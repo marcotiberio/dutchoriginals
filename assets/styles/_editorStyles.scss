@@ -1,0 +1,76 @@
+@include font-face('FuturaLT', 'FuturaLT', '400', 'normal');
+@include font-face('FuturaLT Oblique', 'FuturaLT-Oblique', '400', 'italic');
+@include font-face('FuturaLT Bold', 'FuturaLT-Heavy', '800', 'normal');
+
+.mce-content-body {
+  background-color: #dedede;
+}
+
+#tinymce {
+  h1,
+  .h1 {
+    font-family: 'FuturaLT', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 42px;
+  }
+
+  h2,
+  .h2 {
+    font-family: 'FuturaLT', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 34px;
+  }
+
+  h3,
+  .h3 {
+    font-family: 'FuturaLT', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 22px;
+    text-transform: uppercase;
+  }
+
+  p,
+  .p
+  .paragraph {
+    font-family: 'FuturaLT', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    margin-block-end: 1.2rem;
+    margin-block-start: 0;
+  }
+
+  .small {
+    font-family: 'FuturaLT', sans-serif;
+    font-size: 16px;
+    margin: 0 0 $spacing-small;
+    text-transform: uppercase;
+  }
+
+  a {
+    color: $black;
+    font-family: 'FuturaLT', sans-serif;
+    font-size: inherit;
+    text-decoration: underline;
+  }
+
+  .button {
+    appearance: none;
+    background-color: $orange;
+    border: 1px solid $orange;
+    color: $white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'FuturaLT', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: inherit;
+    padding: $spacing-small/2 $spacing-large;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.2s linear;
+    user-select: none;
+  }
+}
