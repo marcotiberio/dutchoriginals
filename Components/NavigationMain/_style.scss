@@ -106,7 +106,7 @@
       flex-flow: column wrap;
       height: auto;
       justify-content: flex-start;
-      padding: $spacing-small 0;
+      padding: $spacing-large 0 $spacing-small;
       position: absolute;
       text-align: left;
       transform: translateX(-20px);

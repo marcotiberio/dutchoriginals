@@ -46,6 +46,10 @@
         padding: 0 $spacing-large;
       }
 
+      @media (max-width: $breakpoint-mobile) {
+        padding: 0 $spacing-small;
+      }
+
       .left {
         width: 60%;
       }

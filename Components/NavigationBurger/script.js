@@ -18,18 +18,18 @@ class NavigationBurger extends window.HTMLElement {
   resolveElements () {
     this.$menu = $('.menu', this)
     this.$menuButton = $('.hamburger', this)
-    this.$openSubmenu = $('.open-submenu', this)
-    this.$submenu = $('.menu-submenu', this)
+    // this.$openSubmenu = $('.open-submenu', this)
+    // this.$submenu = $('.menu-submenu', this)
   }
 
   bindFunctions () {
     this.triggerMenu = this.triggerMenu.bind(this)
-    this.toggleSubmenu = this.toggleSubmenu.bind(this)
+    // this.toggleSubmenu = this.toggleSubmenu.bind(this)
   }
 
   bindEvents () {
     this.$.on('click', '[data-toggle-menu]', this.triggerMenu)
-    this.$openSubmenu.on('click', this.toggleSubmenu)
+    // this.$openSubmenu.on('click', this.toggleSubmenu)
   }
 
   connectedCallback () {}
@@ -44,9 +44,9 @@ class NavigationBurger extends window.HTMLElement {
     }
   }
 
-  toggleSubmenu (e) {
-    this.$submenu.slideToggle()
-  }
+  // toggleSubmenu (e) {
+  //   this.$submenu.slideToggle()
+  // }
 }
 
 window.customElements.define('flynt-navigation-burger', NavigationBurger, {

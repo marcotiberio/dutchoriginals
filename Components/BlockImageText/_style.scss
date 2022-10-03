@@ -2,7 +2,7 @@
   height: auto;
 
   .box {
-    align-items: flex-start;
+    align-items: center;
     display: flex;
     justify-content: space-between;
 
@@ -22,7 +22,7 @@
           margin: 0;
       
           img {
-            object-fit: cover;
+            object-fit: contain;
         
             @media (max-width: $breakpoint-tablet) {
               height: auto;
@@ -41,6 +41,7 @@
         }
 
         .button {
+          margin-top: $spacing-large;
           width: fit-content;
         }
       }
