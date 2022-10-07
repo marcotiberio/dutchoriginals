@@ -6,34 +6,18 @@ use Flynt\Components;
 add_action('Flynt/afterRegisterComponents', function () {
     // ACFComposer::registerFieldGroup([
     //     'name' => 'postMeta',
-    //     'title' => 'Options',
+    //     'title' => 'Hover Image',
     //     'style' => '',
     //     'menu_order' => 1,
-    //     'position' => 'acf_after_title',
+    //     'position' => 'side',
     //     'fields' => [
     //         [
-    //             'label' => __('Listen', 'flynt'),
-    //             'name' => 'infoTab',
-    //             'type' => 'tab',
-    //             'placement' => 'top',
-    //             'endpoint' => 0
-    //         ],
-    //         [
-    //             'label' => __('Audio', 'flynt'),
-    //             'name' => 'audioEmbed',
-    //             'type' => 'wysiwyg',
-    //             'tabs' => 'visual',
-    //             'delay' => 1,
-    //             'media_upload' => 0,
-    //             'required' => 0,
-    //             'instructions' => __('Copy here the embed code from the audio player.', 'flynt')
-    //         ],
-    //         [
-    //             'label' => __('audio', 'flynt'),
-    //             'name' => 'audio',
-    //             'type' => 'link',
-    //             'return_format' => 'array',
-    //             'mime_types' => 'm4a, mp3',
+    //             'label' => __('', 'flynt'),
+    //             'name' => 'hoverImage',
+    //             'type' => 'image',
+    //             'return_format' => 'url',
+    //             'preview_size' => 'medium',
+    //             'library' => 'all',
     //             'wrapper' => [
     //                 'width' => '100',
     //             ],

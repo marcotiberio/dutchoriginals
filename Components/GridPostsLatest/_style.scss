@@ -45,10 +45,19 @@
 
     &-item {
       &:hover {
+        // .featuredImage {
+        //   border-left: 1px solid $orange;
+        //   border-right: 1px solid $orange;
+        //   border-top: 1px solid $orange;
+        //   transition: all 0.2s linear;
+        // }
+
         .figure {
           border-left: 1px solid $orange;
           border-right: 1px solid $orange;
           border-top: 1px solid $orange;
+          // opacity: 0;
+          // transition: all 0.2s linear;
 
           &-image {
             transform: scale(0.9);
@@ -68,12 +77,25 @@
       text-decoration: none;
     }
 
+    // .featuredImage {
+    //   aspect-ratio: 1/1;
+    //   background-position: center;
+    //   background-repeat: repeat;
+    //   background-size: cover;
+    //   display: block;
+    //   max-width: 100%;
+    //   transition: all 0.2s linear;
+    //   width: 100%;
+    // }
+
     .figure {
-      border-bottom: 1px solid $orange;
+      aspect-ratio: 1/1;
+      background-color: $white;
       flex-shrink: 0; // IE11 bug fix (prevent image from stretchin')
       margin: 0;
       overflow: hidden;
       padding-bottom: $spacing-large;
+      // transition: all 0.2s linear;
       
       &-image {
         aspect-ratio: 1/1;
@@ -84,6 +106,7 @@
 
     &-inner {
       @include reset-content-margins;
+      border-top: 1px solid $orange;
       padding-top: $spacing-small;
     }
 

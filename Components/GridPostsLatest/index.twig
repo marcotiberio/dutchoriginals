@@ -22,6 +22,11 @@
           <li class="grid-item">
             <div class="content">
               <a href="{{ item.link }}" class="content-link" title="{{ item.title }}">
+                {# {% if item.hoverImage %}
+                  <div class="featuredImage" style="background-image: url('{{ Image(item.hoverImage).src }}');"><div>
+                {% else %}
+                  <div class="featuredImage" style="background-image: url('{{ Image(item.thumbnail).src }}');"><div>
+                {% endif %} #}
                 <figure class="figure">
                   <img class="figure-image lazyload"
                     src="{{ item.thumbnail.src|resize(32) }}"
