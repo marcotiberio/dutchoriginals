@@ -17,6 +17,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'layouts' => [
                     Components\BlockBannerImage\getACFLayout(),
                     Components\BlockCircles\getACFLayout(),
+                    Components\BlockDownloads\getACFLayout(),
                     Components\BlockImage\getACFLayout(),
                     Components\BlockImageText\getACFLayout(),
                     Components\BlockImageTextLink\getACFLayout(),

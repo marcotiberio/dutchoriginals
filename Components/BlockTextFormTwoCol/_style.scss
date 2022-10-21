@@ -1,8 +1,13 @@
 [is='flynt-block-text-form-two-col'] {
   .container {
-    @media (max-width: $breakpoint-tablet) {
+    @media (max-width: $breakpoint-mobile) {
       display: block;
     }
+  }
+
+  h3,
+  .h3 {
+    color: $orange;
   }
 
   .content {
@@ -19,7 +24,7 @@
 
     &-text {
       grid-column-end: 5;
-      grid-column-start: 2;
+      grid-column-start: 1;
     }
 
     &-form {
@@ -33,6 +38,21 @@
       p {
         margin: 0;
       }
+
+      .hf-fields-wrap {
+        .group-submit {
+          align-items: flex-start;
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: space-between;
+
+          p:first-child {
+            width: 50%;
+          }
+        }
+      }
+
+      
   
       .wpcf7 {
         transform: translateY(1rem);

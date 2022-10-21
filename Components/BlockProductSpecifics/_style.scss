@@ -141,7 +141,7 @@
       }
 
       &--next {
-        right: calc(60vh - 30px);
+        left: calc(60vh + 25px);
 
         @media (max-width: $breakpoint-tablet) {
           left: 50vw;
@@ -151,12 +151,6 @@
         @media (max-width: $breakpoint-mobile) {
           left: auto;
           right: 15px;
-        }
-      }
-
-      svg {
-        @media (max-width: $breakpoint-tablet) {
-          transform: scale(0.5);
         }
       }
     }

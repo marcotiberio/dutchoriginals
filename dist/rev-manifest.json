@@ -17,7 +17,11 @@
   "Components/NavigationFooterColumns/Assets/twitter.svg": "Components/NavigationFooterColumns/Assets/twitter-b860fd200d.svg",
   "Components/NavigationFooterColumns/Assets/youtube.svg": "Components/NavigationFooterColumns/Assets/youtube-3b8f2b7f41.svg",
   "Components/NavigationMain/Assets/logo.svg": "Components/NavigationMain/Assets/logo-4627cdfa7d.svg",
+  "Components/NavigationPreNav/Assets/facebook.svg": "Components/NavigationPreNav/Assets/facebook-d3e8f5734a.svg",
+  "Components/NavigationPreNav/Assets/instagram.svg": "Components/NavigationPreNav/Assets/instagram-89902ca170.svg",
+  "Components/NavigationPreNav/Assets/linkedin.svg": "Components/NavigationPreNav/Assets/linkedin-a2408b20a4.svg",
   "Components/NavigationPreNav/Assets/logo.svg": "Components/NavigationPreNav/Assets/logo-4627cdfa7d.svg",
+  "Components/NavigationPreNav/Assets/pinterest.svg": "Components/NavigationPreNav/Assets/pinterest-53de61896f.svg",
   "Components/SliderImagesLanding/Assets/logo.svg": "Components/SliderImagesLanding/Assets/logo-4627cdfa7d.svg",
   "assets/admin.css": "assets/admin-83ce04fc50.css",
   "assets/admin.js": "assets/admin-c3ad51a03b.js",
@@ -44,8 +48,10 @@
   "assets/fonts/FuturaLT.woff": "assets/fonts/FuturaLT-cba022b034.woff",
   "assets/fonts/NBInternationalProRegular.woff2": "assets/fonts/NBInternationalProRegular-5d446e269a.woff2",
   "assets/icons/check-circle.svg": "assets/icons/check-circle-98401bcdb9.svg",
+  "assets/icons/down_orange.svg": "assets/icons/down_orange-6c66bd41c2.svg",
+  "assets/icons/down_white.svg": "assets/icons/down_white-d1890008d4.svg",
   "assets/icons/spinner.svg": "assets/icons/spinner-2e5c842fc5.svg",
-  "assets/main.css": "assets/main-cd0a3df644.css",
+  "assets/main.css": "assets/main-92c79860b2.css",
   "assets/main.js": "assets/main-09652c8136.js",
   "assets/main.js.LICENSE.txt": "assets/main-4ee72da035.js.LICENSE.txt"
 }

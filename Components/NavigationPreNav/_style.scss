@@ -25,10 +25,11 @@
     display: flex;
     height: 100%;
     justify-content: space-between;
-    max-width: 1680px;
+    padding: 0 $spacing-large;
 
     @media (max-width: $breakpoint-tablet) {
       justify-content: flex-end;
+      padding: 0 $spacing-small;
     }
   }
 
@@ -53,12 +54,9 @@
     align-items: center;
     display: flex;
     flex-flow: row wrap;
+    flex-grow: 1;
     justify-content: flex-end;
-    width: 100%;
-
-    @media (max-width: $breakpoint-tablet) {
-      justify-content: space-between;
-    }
+    margin-right: $spacing-small;
 
     &-item--current {
       .menu-link {
@@ -67,6 +65,7 @@
     }
 
     &-item {
+      font-size: 0.85rem;
       padding-left: $spacing-small*3;
 
       @media (max-width: $breakpoint-tablet) {
@@ -97,6 +96,55 @@
       &:focus {
         color: $white;
         opacity: 0.7;
+      }
+    }
+  }
+
+  .social {
+    @include reset-content-margins;
+  }
+
+  .socialList {
+    @include reset-list;
+    align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+    height: 100%;
+    justify-content: center;
+
+    @media (min-width: $breakpoint-tablet) {
+      justify-content: center;
+    }
+
+    &-link {
+      box-sizing: content-box;
+      display: block;
+      text-decoration: none;
+      transition: color 0.2s ease;
+
+      &:hover,
+      &:focus {
+        svg {
+          opacity: 0.8;
+          transition: color 0.2s ease;
+        }
+      }
+    }
+
+    &-item {
+      display: inline-block;
+      margin: 0 $spacing-small/2;
+    }
+
+    svg {
+      display: block;
+      height: 100%;
+      max-width: 20px;
+      transition: color 0.2s ease;
+      width: auto;
+
+      image {
+        filter: invert(0.5) saturate(100) brightness(100);
       }
     }
   }

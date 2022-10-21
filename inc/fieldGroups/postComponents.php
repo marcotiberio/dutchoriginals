@@ -4,35 +4,35 @@ use ACFComposer\ACFComposer;
 use Flynt\Components;
 
 add_action('Flynt/afterRegisterComponents', function () {
-    // ACFComposer::registerFieldGroup([
-    //     'name' => 'postMeta',
-    //     'title' => 'Hover Image',
-    //     'style' => '',
-    //     'menu_order' => 1,
-    //     'position' => 'side',
-    //     'fields' => [
-    //         [
-    //             'label' => __('', 'flynt'),
-    //             'name' => 'hoverImage',
-    //             'type' => 'image',
-    //             'return_format' => 'url',
-    //             'preview_size' => 'medium',
-    //             'library' => 'all',
-    //             'wrapper' => [
-    //                 'width' => '100',
-    //             ],
-    //         ],
-    //     ],
-    //     'location' => [
-    //         [
-    //             [
-    //                 'param' => 'post_type',
-    //                 'operator' => '==',
-    //                 'value' => 'post',
-    //             ],
-    //         ],
-    //     ],
-    // ]);
+    ACFComposer::registerFieldGroup([
+        'name' => 'postMeta',
+        'title' => 'Hover Image',
+        'style' => '',
+        'menu_order' => 1,
+        'position' => 'side',
+        'fields' => [
+            [
+                'label' => __('', 'flynt'),
+                'name' => 'hoverImage',
+                'type' => 'image',
+                'return_format' => 'url',
+                'preview_size' => 'medium',
+                'library' => 'all',
+                'wrapper' => [
+                    'width' => '100',
+                ],
+            ],
+        ],
+        'location' => [
+            [
+                [
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'post',
+                ],
+            ],
+        ],
+    ]);
     ACFComposer::registerFieldGroup([
         'name' => 'postComponents',
         'title' => 'Post Components',

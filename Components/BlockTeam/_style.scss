@@ -7,6 +7,11 @@
     padding-top: $spacing-large;
   }
 
+  h3,
+  .h3 {
+    color: $orange;
+  }
+
   .box {
     align-items: center;
     display: flex;
