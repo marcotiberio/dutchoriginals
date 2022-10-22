@@ -33,7 +33,7 @@ function getACFLayout()
 {
     return [
         'name' => 'GridPostsLatest',
-        'label' => 'Grid: Posts Latest',
+        'label' => 'Grid: Products',
         'sub_fields' => [
             [
                 'label' => __('Info', 'flynt'),
