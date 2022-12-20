@@ -11,40 +11,6 @@ function getACFLayout()
         'label' => 'Block: Downloads',
         'sub_fields' => [
             [
-                'label' => __('General Info', 'flynt'),
-                'name' => 'generalTab',
-                'type' => 'tab',
-                'placement' => 'top',
-                'endpoint' => 0
-            ],
-            [
-                'label' => __('General Info', 'flynt'),
-                'name' => 'generalInfo',
-                'type' => 'group',
-                'placement' => 'top',
-                'endpoint' => 0,
-                'sub_fields' => [
-                    [
-                        'label' => __('Intro', 'flynt'),
-                        'name' => 'preContentHtml',
-                        'type' => 'wysiwyg',
-                        'tabs' => 'visual',
-                        'media_upload' => 0,
-                        'delay' => 1,
-                        'wrapper' => [
-                            'width' => 100
-                        ],
-                    ]
-                ]
-            ],
-            [
-                'label' => __('Downloads', 'flynt'),
-                'name' => 'downloadsTab',
-                'type' => 'tab',
-                'placement' => 'top',
-                'endpoint' => 0
-            ],
-            [
                 'label' => __('Downloads Section', 'flynt'),
                 'name' => 'repeaterOuter',
                 'type' => 'repeater',
@@ -55,13 +21,7 @@ function getACFLayout()
                     [
                         'label' => __('Title', 'flynt'),
                         'name' => 'title',
-                        'type' => 'wysiwyg',
-                        'tabs' => 'visual',
-                        'media_upload' => 0,
-                        'delay' => 1,
-                        'wrapper' => [
-                            'width' => 100
-                        ],
+                        'type' => 'text'
                     ],
                     [
                         'label' => __('Downloads', 'flynt'),

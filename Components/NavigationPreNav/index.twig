@@ -1,15 +1,6 @@
 <nav is="flynt-navigation-pre-nav" class="flyntComponent" aria-label="{{ __("Pre Navigation", "flynt") }}">
   <div class="wrapper">
     <div class="container">
-      {% if menu %}
-        <ul class="menu">
-          {% for item in menu.items %}
-            <li class="menu-item {{ item.current ? 'menu-item--current' }}">
-              <a class="menu-link" href="{{ item.link }}" {{ item.target == '_blank' ? 'target="_blank" rel="noopener noreferrer"' }}>{{ item.title }}</a>
-            </li>
-          {% endfor %}
-        </ul>
-      {% endif %}
       <div class="social">
         {% if social %}
           <ul class="socialList">
@@ -23,6 +14,16 @@
           </ul>
         {% endif %}
       </div>
+      {% if menu %}
+        <ul class="menu">
+          {% for item in menu.items %}
+            <li class="menu-item {{ item.current ? 'menu-item--current' }}">
+              <a class="menu-link" href="{{ item.link }}" {{ item.target == '_blank' ? 'target="_blank" rel="noopener noreferrer"' }}>{{ item.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+      {% include 'Partials/_search.twig' %}
     </div>
   </div>
 </nav>

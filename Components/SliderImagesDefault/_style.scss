@@ -1,5 +1,20 @@
 [is='flynt-slider-images-default'] {
-  max-width: 1200px !important;
+  margin: 0 auto;
+  max-width: 1680px !important;
+  padding: $spacing-large;
+  width: 100%;
+
+  @media (max-width: $breakpoint-tablet) {
+    margin: 0;
+    max-width: 100%;
+    padding: $spacing-large;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    margin: 0;
+    max-width: 100%;
+    padding: $spacing-small;
+  }
 
   .preContent {
     padding-left: $spacing-large*3;

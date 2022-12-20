@@ -37,8 +37,8 @@ function getACFLayout()
                 'type' => 'gallery',
                 'min' => 2,
                 'preview_size' => 'medium',
-                'mime_types' => 'jpg,jpeg,png',
-                'instructions' => __('Image-Format: JPG, PNG.', 'flynt'),
+                'mime_types' => 'jpg,jpeg,png, gif',
+                'instructions' => __('Image-Format: JPG, PNG, GIF.', 'flynt'),
                 'required' => 1
             ],
             [

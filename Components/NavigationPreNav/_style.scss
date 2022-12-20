@@ -24,11 +24,11 @@
   .container {
     display: flex;
     height: 100%;
-    justify-content: space-between;
+    justify-content: flex-end;
     padding: 0 $spacing-large;
 
     @media (max-width: $breakpoint-tablet) {
-      justify-content: flex-end;
+      justify-content: center;
       padding: 0 $spacing-small;
     }
   }
@@ -38,7 +38,7 @@
     color: $white;
     cursor: default;
     display: flex;
-    font-family: 'Vesta', Helvetica, Arial, sans-serif;
+    font-family: 'FuturaLT', sans-serif;
     font-size: 10px;
     padding: 0 $spacing-large;
     text-decoration: none;
@@ -54,13 +54,19 @@
     align-items: center;
     display: flex;
     flex-flow: row wrap;
-    flex-grow: 1;
+    flex-grow: 0;
     justify-content: flex-end;
-    margin-right: $spacing-small;
+    margin-right: $spacing-small*3;
+
+    @media (max-width: $breakpoint-tablet) {
+      margin-right: $spacing-small;
+    }
 
     &-item--current {
       .menu-link {
         color: $white;
+        text-decoration: underline;
+        text-underline-offset: 2.5px;
       }
     }
 
@@ -81,7 +87,7 @@
       box-shadow: none;
       color: $white;
       display: inline-block;
-      font-family: 'Vesta', Helvetica, Arial, sans-serif;
+      font-family: 'FuturaLT', sans-serif;
       font-size: 0.7rem;
       padding: 0;
       text-decoration: none;
@@ -95,13 +101,23 @@
       &:hover,
       &:focus {
         color: $white;
-        opacity: 0.7;
+        text-decoration: underline;
+        text-underline-offset: 2.5px;
       }
     }
   }
 
   .social {
-    @include reset-content-margins;
+    @include reset-list;
+    align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+    flex-grow: 1;
+    justify-content: flex-end;
+
+    @media (max-width: $breakpoint-mobile) {
+      justify-content: flex-start;
+    }
   }
 
   .socialList {
@@ -138,14 +154,12 @@
 
     svg {
       display: block;
-      height: 100%;
-      max-width: 20px;
+      filter: invert(0.5) saturate(100) brightness(100);
+      height: 20px;
       transition: color 0.2s ease;
       width: auto;
-
-      image {
-        filter: invert(0.5) saturate(100) brightness(100);
-      }
     }
   }
+
+  @import 'Partials/search';
 }

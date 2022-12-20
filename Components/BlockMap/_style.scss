@@ -81,9 +81,53 @@
     }
 
     td {
-      border-bottom: 1px solid $orange !important;
       border-radius: 0 !important;
       transition: none !important;
+    }
+
+
+    @media (max-width: $breakpoint-mobile) {
+      .wpgmza_table_title {
+        border-bottom: 0 !important;
+        float: left;
+        width: 50%;
+      }
+  
+      .wpgmza_table_address {
+        border-bottom: 1px solid $orange !important;
+        float: left;
+        width: 100%;
+      }
+  
+      .wpgmza_table_category {
+        border-bottom: 0 !important;
+        float: right;
+        text-align: right;
+        width: 50%;
+      }
+    }
+
+    @media (min-width: $breakpoint-mobile + 1) {
+      .wpgmza_table_title,
+      #wpgmza_map_list_title {
+        border-bottom: 1px solid $orange !important;
+        float: left !important;
+        width: 40% !important;
+      }
+  
+      .wpgmza_table_address,
+      #wpgmza_map_list_address {
+        border-bottom: 1px solid $orange !important;
+        float: left !important;
+        width: 45% !important;
+      }
+  
+      .wpgmza_table_category,
+      #wpgmza_map_list_category {
+        border-bottom: 1px solid $orange !important;
+        float: right !important;
+        width: 15% !important;
+      }
     }
   }
 

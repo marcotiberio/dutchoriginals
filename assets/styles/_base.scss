@@ -226,13 +226,11 @@ figure {
 }
 
 .sectionId {
-  font-family: 'NB International', sans-serif;
   font-size: 0.889rem;
   text-transform: uppercase;
 }
 
 .small {
-  font-family: 'NB International', sans-serif;
   font-size: 0.875rem;
   margin: 0 0 $spacing-small;
   text-transform: uppercase;
@@ -827,6 +825,15 @@ textarea {
     .logo-image {
       filter: invert(1);
     }
+  }
+}
+
+.home .mainContent {
+  flex: 1 0 auto;
+  margin-top: 100px;
+
+  @media (max-width: $breakpoint-tablet) {
+    margin-top: 100px;
   }
 }
 
