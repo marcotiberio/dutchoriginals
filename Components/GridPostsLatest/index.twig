@@ -23,12 +23,12 @@
             <div class="content">
               <a href="{{ item.link }}" class="content-link" title="{{ item.title }}">
                 <img class="content-image lazyload"
-                  src="{{ item.thumbnail.src|resize(32) }}"
+                  src="{{ item.thumbnail.src }}"
                   data-srcset="{{function('wp_get_attachment_image_srcset', item.thumbnail.id)}}"
                   data-sizes="auto">
                 <div class="content-inner">
                   <h3 class="content-inner--title">{{ item.title }}</h3>
-                  <p class="content-excerpt">{{ item.preview.read_more(false).length(60) }}</p>
+                  {# <p class="content-excerpt">{{ item.preview.read_more(false).length(60) }}</p> #}
                 </div>
               </a>
               {# <footer class="content-footer">

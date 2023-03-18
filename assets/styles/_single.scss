@@ -23,6 +23,18 @@
       display: none;
     }
 
+    .content {
+      &-image {
+        aspect-ratio: 1/1;
+        object-fit: contain;
+      }
+
+      h3,
+      .h3 {
+        font-size: 1rem;
+      }
+    }
+
     .container {
       @media (max-width: $breakpoint-mobile) {
         padding: 0;
@@ -54,5 +66,14 @@
 
   [is='flynt-navigation-footer-columns'] {
     margin-top: 0;
+  }
+}
+
+.single-news {
+  [is='flynt-block-post-header'] .post-header {
+    border-bottom: 0;
+    margin: 0 auto;
+    max-width: 1080px;
+    padding-bottom: 7.5px;
   }
 }
