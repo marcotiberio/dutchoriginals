@@ -12,6 +12,21 @@ function getACFLayout()
         'label' => 'Product Specifics',
         'sub_fields' => [
             [
+                'label' => __('General', 'flynt'),
+                'name' => 'generalTab',
+                'type' => 'tab',
+                'placement' => 'top',
+                'endpoint' => 0
+            ],
+            [
+                'label' => __('Subtitle', 'flynt'),
+                'name' => 'subtitle',
+                'type' => 'text',
+                'wrapper' => [
+                    'width' => '100',
+                ],
+            ],
+            [
                 'label' => __('Slideshow', 'flynt'),
                 'name' => 'slideshowTab',
                 'type' => 'tab',
@@ -62,6 +77,16 @@ function getACFLayout()
             [
                 'label' => __('Description', 'flynt'),
                 'name' => 'descriptionHtml',
+                'type' => 'wysiwyg',
+                'delay' => 1,
+                'media_upload' => 0,
+                'wrapper' => [
+                    'width' => '100',
+                ],
+            ],
+            [
+                'label' => __('Specifications', 'flynt'),
+                'name' => 'specificationsHtml',
                 'type' => 'wysiwyg',
                 'delay' => 1,
                 'media_upload' => 0,

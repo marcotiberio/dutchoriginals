@@ -1,5 +1,8 @@
 <div class="flyntComponent boxed" is="flynt-block-product-specifics">
   <script type="application/json">{{ jsonData|json_encode }}</script>
+  {% if subtitle %}
+    <div class="product-subtitle boxed">{{ subtitle }}</div>
+  {% endif %}
   <div class="container">
     <div class="slider-container">
       <div data-slider class="slider sliderTop swiper-container">
@@ -27,35 +30,33 @@
           <path d="M2 2L28.1716 28.1716C29.7337 29.7337 29.7337 32.2663 28.1716 33.8284L2 60" stroke="#D96B36" stroke-width="3"/>
         </svg>
       </button>
-      {# <div thumbsSlider="" class="slider sliderThumb swiper-container">
-        <div class="swiper-wrapper">
-          {% for image in images %}
-            <div class="slider-item swiper-slide">
-              <figure class="figure">
-                <img class="figure-image lazyload"
-                  src="{{ image.src|resize(32) }}"
-                  data-srcset="{{function('wp_get_attachment_image_srcset', image.id)}}"
-                  data-sizes="auto">
-              </figure>
-            </div>
-          {% endfor %}
-        </div>
-      </div> #}
     </div>
     <div class="productInfo">
       <div class="top">
-        <div>{{ model }}</div>
-        <div>{{ producer }}</div>
-        <div>{{ price }}</div>
+        <div class="model">{{ model }}</div>
+        <div class="producer">{{ producer }}</div>
       </div>
       <div class="center">
         <div>{{ label.description }}</div>
         <div>{{ descriptionHtml }}</div>
       </div>
       <div class="bottom">
-        <a href="{{ buttonLink.url }}"{% if buttonLink.target %} target="{{ buttonLink.target }}" rel="noreferrer noopener"{% endif %} class="button button--grey">
-          {{ buttonLink.title|e }}
-        </a>
+        <div class="specs">
+          <button class="panel-trigger" type="button" aria-expanded="false" aria-controls="content-{{ loop.index }}">
+            {{ price }}
+          </button>
+          <div class="panel-content" aria-hidden="true" id="content-{{ loop.index }}">
+            <div class="panel-inner">
+              {{ specificationsHtml }}
+              <div class="button-wrapper">
+                {# <div class="price">{{ price }}</div> #}
+                <a href="{{ buttonLink.url }}"{% if buttonLink.target %} target="{{ buttonLink.target }}" rel="noreferrer noopener"{% endif %} class="button button--grey">
+                  {{ buttonLink.title|e }}
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

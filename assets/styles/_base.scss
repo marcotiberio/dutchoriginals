@@ -6,7 +6,8 @@
 
 @include font-face('FuturaLT', 'FuturaLT', '400', 'normal');
 @include font-face('FuturaLT Oblique', 'FuturaLT-Oblique', '400', 'italic');
-@include font-face('FuturaLT Bold', 'FuturaLT-Heavy', '800', 'normal');
+@include font-face('FuturaLT Bold', 'FuturaLT-Heavy', '700', 'normal');
+@include font-face('FuturaLT Extra Bold', 'FuturaLT-ExtraBold', '800', 'normal');
 
 html {
   background-color: $color-background;

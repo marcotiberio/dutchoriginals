@@ -47,12 +47,22 @@ function getACFLayout()
                         'name' => 'image',
                         'type' => 'image',
                         'preview_size' => 'medium',
-                        'instructions' => __('Image-Format: JPG, PNG, SVG.', 'flynt'),
+                        'instructions' => __('Image-Format: JPG, PNG, SVG, GIF.', 'flynt'),
                         'required' => 0,
-                        'mime_types' => 'jpg,jpeg,png,svg',
+                        'mime_types' => 'jpg,jpeg,png,svg,gif',
                         'wrapper' =>  [
-                            'width' => '30',
+                            'width' => 50,
                         ]
+                    ],
+                    [
+                        'label' => __('Video', 'flynt'),
+                        'name' => 'video',
+                        'type' => 'file',
+                        'return_format' => 'url',
+                        'mime_types' => 'mp4',
+                        'wrapper' => [
+                            'width' => 50,
+                        ],
                     ],
                     [
                         'label' => __('Content', 'flynt'),
@@ -62,7 +72,7 @@ function getACFLayout()
                         'media_upload' => 0,
                         'required' => 0,
                         'wrapper' =>  [
-                            'width' => '70',
+                            'width' => '100',
                         ]
                     ],
                 ],

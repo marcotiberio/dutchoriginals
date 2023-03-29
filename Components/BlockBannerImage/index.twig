@@ -8,6 +8,7 @@
         </div>
       </div>
     {% endif %}
+    {% if image %}
     <figure class="figure">
       <img class="figure-image lazyload"
           src="{{ image.src }}"
@@ -17,5 +18,11 @@
         <figcaption class="figure-caption">{{ image.caption|e }}</figcaption>
       {% endif %}
     </figure>
+    {% endif %}
+    {% if video %}
+      <video controls playsinline>
+        <source type="video/mp4" src="{{ video }}">
+      </video>
+    {% endif %}
   </div>
 </div>

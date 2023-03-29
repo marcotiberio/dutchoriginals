@@ -23,6 +23,8 @@ class BlockProductSpecifics extends window.HTMLDivElement {
     this.$ = $(this)
     this.props = this.getInitialProps()
     this.resolveElements()
+    this.bindFunctions()
+    this.bindEvents()
   }
 
   getInitialProps () {
@@ -40,6 +42,26 @@ class BlockProductSpecifics extends window.HTMLDivElement {
     this.$buttonNext = $('[data-slider-button="next"]', this)
     this.$buttonPrev = $('[data-slider-button="prev"]', this)
     this.$pagination = $('[data-slider-pagination]', this)
+  }
+
+  bindFunctions () {
+    this.togglePanel = this.togglePanel.bind(this)
+  }
+
+  bindEvents () {
+    this.$.on('click', '[aria-controls]', this.togglePanel)
+  }
+
+  togglePanel (e) {
+    const $panel = $(e.currentTarget)
+
+    if ($panel.attr('aria-expanded') === 'true') {
+      $panel.attr('aria-expanded', 'false')
+      $panel.next().attr('aria-hidden', 'true').slideUp()
+    } else {
+      $panel.attr('aria-expanded', 'true')
+      $panel.next().attr('aria-hidden', 'false').slideDown()
+    }
   }
 
   // connectedCallback () {

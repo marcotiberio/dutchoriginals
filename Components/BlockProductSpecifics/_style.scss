@@ -1,4 +1,22 @@
 [is='flynt-block-product-specifics'] {
+  max-width: 1200px;
+
+  .product-subtitle {
+    font-family: 'FuturaLT Oblique', sans-serif;
+    font-size: 50px;
+    line-height: 50px;
+    padding-bottom: 0;
+    padding-top: 0;
+    text-align: right;
+    width: 50%;
+
+    @media (max-width: $breakpoint-tablet) {
+      font-size: 40px;
+      line-height: 40px;
+      width: 100%;
+    }
+  }
+
   .container {
     column-gap: $spacing-small*7;
     display: grid;
@@ -18,7 +36,7 @@
   }
 
   .productInfo {
-    align-content: center;
+    align-content: flex-start;
     align-items: flex-start;
     display: flex;
     flex-flow: row wrap;
@@ -42,10 +60,14 @@
       .paragraph {
         margin: 0;
       }
+
+      .model {
+        font-family: 'FuturaLT Bold', sans-serif;
+      }
     }
 
     .center {
-      margin-bottom: $spacing-small*3;
+      margin-bottom: $spacing-small;
       width: 100%;
 
       p,
@@ -56,6 +78,75 @@
 
     .bottom {
       width: 100%;
+
+      .specs {
+        background: $grey;
+        margin-bottom: $spacing-small;
+        width: 80%;
+
+        @media (max-width: $breakpoint-tablet) {
+          width: 100%;
+        }
+    
+        .panel-trigger {
+          cursor: pointer;
+          font-family: 'FuturaLT Oblique', sans-serif;
+          margin: 0;
+          padding: $spacing-small;
+          position: relative;
+          width: 100%;
+    
+          &::after {
+            $color-text-rgb: red($color-contrast), green($color-contrast), blue($color-contrast);
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='32' height='32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline fill='none' stroke='rgb(#{$color-text-rgb})' stroke-width='2' points='2,9 16,25 30,9 '/%3E%3C/svg%3E");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            content: '';
+            display: block;
+            height: 100%;
+            position: absolute;
+            right: 15px;
+            top: 0;
+            transition: transform 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+            width: 15px;
+          }
+    
+          &[aria-expanded='true'] {
+            &::after {
+              transform: rotateX(180deg);
+            }
+          }
+        }
+    
+        // do not add margins or padding to this, it will break the layout
+        .panel-content {
+          display: none;
+          margin: 0;
+          padding: 0;
+        }
+    
+        // add custom paddings here
+        .panel-inner {
+          padding: 0 $spacing-small $spacing-small;
+        }
+      }
+
+      .button-wrapper {
+        display: flex;
+        flex-flow: row wrap;
+        gap: $spacing-small;
+        margin-top: $spacing-small;
+        width: 100%;
+
+        @media (max-width: $breakpoint-tablet) {
+          width: 100%;
+        }
+
+        .button {
+          width: 100%;
+        }
+      }
     }
   }
 
@@ -110,7 +201,7 @@
       height: 29px;
       justify-content: center;
       position: absolute;
-      top: 25vw;
+      top: 45vw;
       transform: translateY(-50%);
       transition: opacity 0.2s ease-out;
       width: 13px;
@@ -118,7 +209,18 @@
 
       @media (min-width: $breakpoint-mobile + 1) {
         height: 58px;
-        top: 50%;
+        top: 35vw;
+        width: 27px;
+
+        &:hover,
+        &:focus {
+          opacity: 0.8;
+        }
+      }
+
+      @media (min-width: $breakpoint-desktop) {
+        height: 58px;
+        top: 25vw;
         width: 27px;
 
         &:hover,
@@ -178,7 +280,8 @@
 
   .slider-pagination {
     align-items: center;
-    display: flex;
+    // display: flex;
+    display: none;
     flex-flow: row;
     justify-content: center;
     margin-top: $spacing-large;

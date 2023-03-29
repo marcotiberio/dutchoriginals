@@ -6,12 +6,19 @@
       {% if loop.index0 is even %}
         <a href="{{ box.blockLink.url }}" {% if box.blockLink.target %} target="{{ box.blockLink.target }}" rel="noreferrer noopener"{% endif %} class="box" id="box-{{ loop.index }}">
           <div class="box-inner box-inner--image">
+            {% if box.image %}
             <figure class="figure">
               <img class="figure-image lazyload"
-                src="{{ box.image.src|resize(32) }}"
+                src="{{ box.image.src }}"
                 data-srcset="{{function('wp_get_attachment_image_srcset', box.image.id)}}"
                 data-sizes="auto">
             </figure>
+            {% endif %}
+            {% if box.video %}
+            <video autoplay muted loop>
+              <source type="video/mp4" src="{{ box.video }}">
+            </video>
+            {% endif %}
           </div>
           <div class="box-inner box-inner--image h3">{{ box.title }}</div>
           {% if box.contentHtml %}
@@ -27,12 +34,19 @@
       {% if loop.index0 is odd %}
         <a href="{{ box.blockLink.url }}" {% if box.blockLink.target %} target="{{ box.blockLink.target }}" rel="noreferrer noopener"{% endif %} class="box" id="box-{{ loop.index }}">
           <div class="box-inner box-inner--image">
-            <figure class="figure">
-              <img class="figure-image lazyload"
-                src="{{ box.image.src|resize(32) }}"
-                data-srcset="{{function('wp_get_attachment_image_srcset', box.image.id)}}"
-                data-sizes="auto">
-            </figure>
+            {% if box.image %}
+              <figure class="figure">
+                <img class="figure-image lazyload"
+                  src="{{ box.image.src }}"
+                  data-srcset="{{function('wp_get_attachment_image_srcset', box.image.id)}}"
+                  data-sizes="auto">
+              </figure>
+              {% endif %}
+              {% if box.video %}
+                <video autoplay muted loop>
+                  <source type="video/mp4" src="{{ box.video }}">
+                </video>
+              {% endif %}
           </div>
           <div class="box-inner box-inner--image h3">{{ box.title }}</div>
           {% if box.contentHtml %}
